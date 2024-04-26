@@ -1,2 +1,5 @@
 # University-Java-First-Unity
-My firsts Java Projects
+This repository displays my programs created in my logic programming and algorithms class.
+
+To access the chosen Program.java follows this pathway:
+'Directory' > src > executavel > Program.java 
