@@ -9,7 +9,7 @@ public class ProgramFibonacciCounter {
 
 		int terms, f1 = 1, f2 = 1, fn = 1;
 
-		System.out.println("This program prints the starting numbers of the Fibonacci Sequence, chosen by you!\n");
+		System.out.println("This program prints the starting numbers of the Fibonacci Sequence, chosen by you\n");
 		
 		System.out.print("Number of terms: ");
 		terms = sc.nextInt();
