@@ -16,6 +16,7 @@ public class ProgramFibonacciCounter {
 		System.out.println();
 		
 		for (int i = terms; i > 0; i--) {
+			//The first two numbers of the sequence will always be '1'
 			if (i == terms) {
 				System.out.print(fn+" ");
 			}
@@ -24,16 +25,17 @@ public class ProgramFibonacciCounter {
 				System.out.print(fn+" ");		
 			}
 			
+			//From the third number and onwards we use a formula
 			else {
+				//Fibonacci is the sum of the two past terms
 				fn = f1 + f2;
 				System.out.print(fn+" ");
+				//Then the past terms are updated for following sums
 				f1 = f2;
 				f2 = fn;
-			}
+			} 
 			
 		}
-		
-		
 		
 	}
 
