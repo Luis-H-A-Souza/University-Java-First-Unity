@@ -2,6 +2,8 @@ package executavel;
 
 import java.util.Scanner;
 
+//Read two arrays A and B, both with 10 elements each, and they should only accept values
+//in ascending order. Then generate and print the C array, the interleaving of A and B.
 public class ProgramArrayInterleaver {
 
 	public static void main(String[] args) {
@@ -23,6 +25,7 @@ public class ProgramArrayInterleaver {
 				if (a[i] < a[i - 1]) {
 					System.out.println("Ascending order only!");
 				}
+			//Do-while prevents the user from setting a smaller number
 			} while (a[i] < a[i - 1]);
 			aux++;
 		}
@@ -41,9 +44,13 @@ public class ProgramArrayInterleaver {
 			aux++;
 		}
 		System.out.println("\nAfter the interleaving the third array has the following values:");
+		//This loop fills the C array
 		for (int i = 0; i < 10; i++) {
+			//The conditional finds the smaller number between they individual actual position
 			if (a[contA] <= b[contB]) {
+				//C actual position receives the smaller number if it's the case
 				c[i] = a[contA];
+				//The respective array individually increments it's position
 				contA++;
 			} else {
 				c[i] = b[contB];

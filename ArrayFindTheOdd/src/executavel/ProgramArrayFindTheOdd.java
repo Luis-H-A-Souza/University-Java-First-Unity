@@ -24,7 +24,7 @@ public class ProgramArrayFindTheOdd {
 		System.out.println("\nThis were the odd numbers: ");
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] % 2 != 0) {
-				System.out.print(array[i] + " ");
+				System.out.println("Position " + i + " has an odd number: " + array[i]);
 			}
 		}
 		System.out.println("\nTotalizing " + odd + " odd numbers");
