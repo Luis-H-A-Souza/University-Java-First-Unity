@@ -10,7 +10,7 @@ public class ProgramArrayInterleaver {
 		Scanner sc = new Scanner(System.in);
 		int[] a = new int[10];
 		int[] b = new int[10];
-		int[] c = new int[10];
+		int[] c = new int[20];
 		int aux = 2, contA = 0, contB = 0;
 
 		System.out.println("Welcome to Kiko's Array Interleaver!");
@@ -45,17 +45,16 @@ public class ProgramArrayInterleaver {
 		}
 		System.out.println("\nAfter the interleaving the third array has the following values:");
 		//This loop fills the C array
-		for (int i = 0; i < 10; i++) {
-			//The conditional finds the smaller number between they individual actual position
-			if (a[contA] <= b[contB]) {
-				//C actual position receives the smaller number if it's the case
+		for (int i = 0; i < c.length; i++) {
+			if (i % 2 == 0) {
 				c[i] = a[contA];
-				//The respective array individually increments it's position
 				contA++;
-			} else {
+			}
+			else {
 				c[i] = b[contB];
 				contB++;
 			}
+			
 			System.out.print(c[i] + " ");
 		}
 	}
