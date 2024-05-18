@@ -25,7 +25,7 @@ public class ProgramArrayInterleaver {
 				if (a[i] < a[i - 1]) {
 					System.out.println("Ascending order only!");
 				}
-			//Do-while prevents the user from setting a smaller number
+				// Do-while prevents the user from setting a smaller number
 			} while (a[i] < a[i - 1]);
 			aux++;
 		}
@@ -44,17 +44,15 @@ public class ProgramArrayInterleaver {
 			aux++;
 		}
 		System.out.println("\nAfter the interleaving the third array has the following values:");
-		//This loop fills the C array
+		// This loop fills the C array
 		for (int i = 0; i < c.length; i++) {
 			if (i % 2 == 0) {
 				c[i] = a[contA];
 				contA++;
-			}
-			else {
+			} else {
 				c[i] = b[contB];
 				contB++;
 			}
-			
 			System.out.print(c[i] + " ");
 		}
 	}
