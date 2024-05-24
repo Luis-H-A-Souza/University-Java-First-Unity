@@ -10,28 +10,33 @@ public class ProgramArraySequenceCleaner {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		char continuar;
+		char repeat = 'o';
 		int[] sequence = new int[20];
 		int[] sequenceCleaned = new int[20];
-		int aux = 1, flag, p = 0;
-		
+		int aux = 1, flag, p = 0, s = 0;
 
 		System.out.println("Welcome to Kiko's Sequence Cleaner!");
 		System.out.println("\nStart by filling the array!\n");
-			for (int i = 0; i < sequence.length; i++) {
+		do {
 			do {
 				System.out.print(aux + "º Number: ");
-				sequence[i] = sc.nextInt();
-				if (sequence[i] < 0) {
+				sequence[s] = sc.nextInt();
+				s++;
+				if (sequence[s] < 0) {
 					System.out.println("Inform only natural numbers!");
 				}
-			} while (sequence[i] < 0);
+			} while (sequence[s] < 0);
 			aux++;
-			System.out.println("Do you want to continue (Y/N)?");
-			
-		}
-		
-		for (int i = 0; i < sequence.length; i++) {
+			do {
+				System.out.print("Do you want to continue (Y/N): ");
+				repeat = sc.next().charAt(0);
+				if (repeat != 'n' && repeat != 'N' && repeat != 'Y' && repeat != 'y') {
+					System.out.println("Write only 'y' or 'n'");
+				}
+			} while (repeat != 'n' && repeat != 'N' && repeat != 'Y' && repeat != 'y');
+		} while ((repeat != 'n' && repeat != 'N') && s < 20);
+
+		for (int i = 0; i < s; i++) {
 			flag = 0;
 			for (int k = 0; k < i; k++) {
 				if (sequence[i] == sequence[k]) {
@@ -44,7 +49,7 @@ public class ProgramArraySequenceCleaner {
 			}
 		}
 		System.out.print("\nThe Informed Sequence was: ");
-		for (int i = 0; i < sequence.length; i++) {
+		for (int i = 0; i < s; i++) {
 			System.out.print(sequence[i] + " / ");
 		}
 		System.out.print("\n\nThe Cleaned Sequence is: ");
