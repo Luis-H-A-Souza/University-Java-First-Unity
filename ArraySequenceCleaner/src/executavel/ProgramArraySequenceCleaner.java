@@ -21,12 +21,12 @@ public class ProgramArraySequenceCleaner {
 			do {
 				System.out.print(aux + "º Number: ");
 				sequence[s] = sc.nextInt();
-				s++;
 				if (sequence[s] < 0) {
 					System.out.println("Inform only natural numbers!");
 				}
 			} while (sequence[s] < 0);
 			aux++;
+			s++;
 			do {
 				System.out.print("Do you want to continue (Y/N): ");
 				repeat = sc.next().charAt(0);
