@@ -10,7 +10,7 @@ public class ProgramArraySequenceCleaner {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		char repeat = 'o';
+		char repeat = ' ';
 		int[] sequence = new int[20];
 		int[] sequenceCleaned = new int[20];
 		int aux = 1, flag, p = 0, s = 0;
