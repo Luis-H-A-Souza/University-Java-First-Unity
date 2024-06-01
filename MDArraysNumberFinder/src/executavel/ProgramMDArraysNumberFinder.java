@@ -16,7 +16,7 @@ public class ProgramMDArraysNumberFinder {
 			auxColumn = 0;
 			for (int j = 0; j < Array[0].length; j++) {
 				do {
-					System.out.print("Line " + auxLine + ", Column " + auxColumn+ ": ");
+					System.out.print("Line " + auxLine + ", Column " + auxColumn + ": ");
 					Array[i][j] = sc.nextInt();
 					if (Array[i][j] < 0) {
 						System.out.println("Inform only Positive Numbers!");
@@ -36,7 +36,7 @@ public class ProgramMDArraysNumberFinder {
 			}
 		}
 		if (flag == 0) {
-			System.out.println("Number Not Found!");
+			System.out.println("\nNumber Not Found!");
 		}
 	}
 
