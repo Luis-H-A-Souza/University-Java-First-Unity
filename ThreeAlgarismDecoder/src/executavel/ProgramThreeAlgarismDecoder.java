@@ -25,12 +25,12 @@ public class ProgramThreeAlgarismDecoder {
 					&& (threeAlgarism[i] > -100 || threeAlgarism[i] < -999));
 			aux++;
 		}
-	
+
 		for (int i = 0; i < 10; i++) {
 			verifiedDigit[i] = ((4 * (threeAlgarism[i] / 100)) + (3 * ((threeAlgarism[i] / 10) % 10))
 					+ (2 * ((threeAlgarism[i] % 10) % 10))) / 7;
 		}
-		
+
 		System.out.print("\nThe Verified digits are: | ");
 		for (int i = 0; i < 10; i++) {
 			System.out.print(verifiedDigit[i] + " | ");
